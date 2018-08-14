@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+# setuptools_support and test_pip_download: network access is disabled
+# test_pkg_info_noscmroot and test_use_scm_version_callable: upstream issue #209                                                                             
+TESTS_TO_EXCLUDE="not setuptools_support and not test_pip_download"
+TESTS_TO_EXCLUDE="$TESTS_TO_EXCLUDE and not test_pkginfo_noscmroot and not test_use_scm_version_callable"
+python2 -m pytest -k "$TESTS_TO_EXCLUDE"

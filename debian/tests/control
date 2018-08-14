@@ -1,0 +1,11 @@
+Tests: import2
+Depends: python-setuptools-scm
+
+Tests: import3
+Depends: python3-setuptools-scm
+
+Tests: testsuite2
+Depends: git, mercurial, python-pytest, python-setuptools, python-setuptools-scm
+
+Tests: testsuite3
+Depends: git, mercurial, python3-pytest, python3-setuptools, python3-setuptools-scm
